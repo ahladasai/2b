@@ -1,25 +1,22 @@
-
-import java.lang.*; 
-import java.io.*; 
-import java.util.*; 
-
-class ReverseString 
-{ 
-	public static void main(String[] args) 
-	{ 
-		String input = "GeeksforGeeks"; 
-
-		
-		byte [] strAsByteArray = input.getBytes(); 
-
-		byte [] result = 
-				new byte [strAsByteArray.length]; 
-
-		 
-		for (int i = 0; i<strAsByteArray.length; i++) 
-			result[i] = 
-			strAsByteArray[strAsByteArray.length-i-1]; 
-
-		System.out.println(new String(result)); 
-	} 
-} 
+import java.util.Scanner;
+ 
+public class ReverseString
+{
+    public static void main(String[] args)
+    {
+        System.out.println("Enter string to reverse:");
+        
+        Scanner read = new Scanner(System.in);
+        String str = read.nextLine();
+        String reverse = "";
+        
+        
+        for(int i = str.length() - 1; i >= 0; i--)
+        {
+            reverse = reverse + str.charAt(i);
+        }
+        
+        System.out.println("Reversed string is:");
+        System.out.println(reverse);
+    }
+}
